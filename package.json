@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/torresomar/diagrama/issues"
   },
-  "homepage": "https://github.com/torresomar/diagrama"
+  "homepage": "https://github.com/torresomar/diagrama",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
 }
