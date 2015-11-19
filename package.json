@@ -1,0 +1,24 @@
+{
+  "name": "diagrama",
+  "version": "0.0.1",
+  "description": "React.js and d3.js based components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/torresomar/diagrama.git"
+  },
+  "keywords": [
+    "react",
+    "d3",
+    "charts"
+  ],
+  "author": "Omar Torres",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/torresomar/diagrama/issues"
+  },
+  "homepage": "https://github.com/torresomar/diagrama"
+}
