@@ -1,31 +1,24 @@
 'use strict';
 
-var gulp = require('gulp');
+var gulp        = require('gulp');
+var notify      = require('gulp-notify');
+// JSX Configuration
+var browserify  = require('browserify');
+var babelify    = require('babelify');
+var source      = require('vinyl-source-stream');
+var buffer      = require('vinyl-buffer');
+var watchify    = require('watchify');
+var reactify    = require('reactify');
 
-gulp.task('starter', function() {
-    console.log('Starter');
-});
-
-gulp.task('main-scripts', function() {
-    return browserify({
-        entries: './lib/index.js',
-        extensions: ['.js.jsx'],
-        debug: true
-    })
-    .transform(babelify)
-    .bundle()
-    .pipe(source('main.js'))
-    .pipe(gulpif(distribute, buffer()))
-    .pipe(gulpif(distribute, uglify()))
-    .pipe(gulpif(distribute, rename({suffix: '.min'})))
-    .pipe(gulp.dest(path));
+gulp.task('default', function() {
+    return scripts(true);
 });
 
 function scripts(watch) {
-    var path = distribute ? paths.scripts.dist : paths.scripts.dev;
-    var bundler, rebundle;
+    var bundler, rebundle, path;
+    path = './demo/scripts/';
     bundler = browserify({
-        entries: './gulp/assets/javascripts/main.js',
+        entries: './demo/scripts/application.js',
         extensions: ['.js.jsx'],
         debug: true,
         cache: {}, // required for watchify
