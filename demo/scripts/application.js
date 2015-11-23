@@ -1,3 +1,13 @@
-var Diagrama = require('./../../lib/index');
+var Diagrama    = require('./../../lib/index');
+var React       = require('react');
+var Block       = require('./Block');
 
-Diagrama.test();
+var DiagramaDemo = React.createClass({
+    render: function() {
+        return (
+            <Block/>
+        );
+    }
+});
+
+React.render(<DiagramaDemo/>, document.getElementById('diagrama-demo'));
