@@ -9,11 +9,15 @@ var source      = require('vinyl-source-stream');
 var buffer      = require('vinyl-buffer');
 var watchify    = require('watchify');
 var reactify    = require('reactify');
+// Styles
+var sass        = require('gulp-ruby-sass');
 
 gulp.task('default', function() {
     return scripts(true);
 });
 
+gulp.task('styles', function() {
+});
 function scripts(watch) {
     var bundler, rebundle, path;
     path = './demo/scripts/';
