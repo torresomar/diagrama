@@ -11,12 +11,28 @@ var watchify    = require('watchify');
 var reactify    = require('reactify');
 // Styles
 var sass        = require('gulp-ruby-sass');
+var concat      = require('gulp-concat');
 
-gulp.task('default', function() {
+gulp.task('default', ['styles'], function() {
+    gulp.watch('./demo/styles/*.scss',  ['styles']);
     return scripts(true);
 });
 
 gulp.task('styles', function() {
+    return sass('demo/styles/application.scss',{
+        style: 'expanded',
+        precision: 10,
+        loadPath: ['./bower_components/bootstrap-sass/assets/stylesheets']
+        // loadPath: ['./bower_components/bootstrap/less/']
+    })
+    .pipe(concat('main.css'))
+    .pipe(gulp.dest('demo/styles/'))
+    .pipe(notify({
+        title: 'Styles',
+        subtitle: 'Styles finished',
+        message: 'Styles finished',
+        onLast: true
+    }));
 });
 function scripts(watch) {
     var bundler, rebundle, path;
@@ -41,7 +57,7 @@ function scripts(watch) {
         stream = stream.pipe(source('main.js'));
         return stream.pipe(gulp.dest(path))
         .pipe(notify({
-            title: 'Bundler transform finished',
+            title: 'Scripts',
             subtitle: 'Transform finished',
             message: 'Transform finished',
             onLast: true

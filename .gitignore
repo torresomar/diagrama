@@ -1,2 +1,5 @@
 node_modules/
+bower_components/
+.sass-cache/
 demo/scripts/main.js
+demo/styles/main.css

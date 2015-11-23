@@ -1,0 +1,25 @@
+{
+  "name": "diagrama",
+  "description": "React.js and d3.js based components",
+  "main": "index.js",
+  "authors": [
+    "Omar Torres"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "react",
+    "d3",
+    "charts"
+  ],
+  "homepage": "https://github.com/torresomar/diagrama",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./bower_components",
+    "test",
+    "tests"
+  ]
+}

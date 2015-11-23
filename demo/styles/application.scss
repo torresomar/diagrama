@@ -1,0 +1,82 @@
+@import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:300);
+
+/* Coolors Exported Palette - coolors.co/0b3954-bfd7ea-ff6663-e0ff4f-fefffe */
+
+$color1: #0b3954; //rgba(11, 57, 84, 100)
+$color2: #bfd7ea; //rgba(191, 215, 234, 100)
+$color3: #ff6663; //rgba(255, 102, 99, 100)
+$color4: #e0ff4f; //rgba(224, 255, 79, 100)
+$color5: #fefffe; //rgba(254, 255, 254, 100)
+
+$main-color:    #171A21;
+$subs-color:    #3A606E;
+$header-color:  $color1;
+$hover-color:   $color5;
+$charts-container-color: #F0F0F0;
+
+body,html{
+  height: 100%;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid $header-color;
+  background: $header-color;
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    color: #fff;
+    font-family: 'Titillium Web', sans-serif;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+  }
+}
+
+/* Custom page footer */
+.footer {
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+  p{
+    margin:0;
+  }
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+// @media (min-width: 768px)
+.navbar-nav > li > a {
+  color: #fff;
+  padding: 10px 15px;
+  &:hover{
+    background-color: $hover-color;
+    color: $header-color;
+  }
+}
+
+#diagrama-demo {
+  height: auto;
+  // height: calc(100% - 52px - 10px);
+}
