@@ -1,8 +1,9 @@
 require('./../setup.js');
-var React       = require('react/addons'),
+var React       = require('react'),
     assert      = require('assert'),
-    TestUtils   = React.addons.TestUtils,
-    d3          = require('d3');
+    // TestUtils   = React.addons.TestUtils,
+    d3          = require('d3'),
+    cmp         = require('./../../lib/index').comp;
 
 describe('- BarChart component', function(){
     it('<BarChart/> should have a grid in Y');
