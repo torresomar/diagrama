@@ -7,6 +7,7 @@ var d3              = require('d3');
 
 describe('- BarChart component', function(){
     jsdom();
+
     it('changes inner elements on state change', function() {
         var svgClass = 'test';
         // Render a wrapper
@@ -23,8 +24,12 @@ describe('- BarChart component', function(){
         textContent = d3.select(svg).select('.text-is-awesome');
         assert.equal(textContent.text(), '5,6,7,8,9');
     });
+
     it('should have a grid in Y');
     it('should have a grid in Y with equal Y axis ticks');
+    it('should have the same number of bars as data size');
+    it('should have a grid in X with equal Y axis ticks');
+    it('should have a grid in X with equal Y axis ticks');
     it('should display tooltip on mouseover rect');
     it('should remove tooltip on mouseout rect');
     it('should resize');
