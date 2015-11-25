@@ -35,6 +35,8 @@
     "gulp-util": "^3.0.7",
     "jsdom": "^7.0.2",
     "mocha": "^2.3.4",
+    "mocha-jsdom": "^1.0.0",
+    "react-addons-test-utils": "^0.14.3",
     "react-tools": "^0.13.3",
     "reactify": "^1.1.1",
     "vinyl-buffer": "^1.0.0",
