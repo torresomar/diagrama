@@ -1,17 +1,14 @@
-var Diagrama    = require('./../../lib/index');
 var React       = require('react');
-var Block       = require('./Block');
 var render      = require('react-dom').render;
 
-var BarChart    = Diagrama.Bar;
-
+// Demos
+var BarDemo     = require('./BarChartDemo');
 
 var DiagramaDemo = React.createClass({
     render: function() {
-        console.log(render);
         return (
             <div>
-                <BarChart/>
+                <BarDemo/>
             </div>
         );
     }
