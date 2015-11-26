@@ -43,7 +43,9 @@ var BarChartDemo = React.createClass({
                 </div>
                 <div className='row'>
                     <div className='col-sm-10'>
-                        <BarChart data={this.state.data}/>
+                        <BarChart
+                            data={this.state.data}
+                            domainFn={'name'} />
                     </div>
                     <div className='col-sm-2'>
                         <button onClick={this._init} type='button' className='btn btn-default'>Initialize</button>
